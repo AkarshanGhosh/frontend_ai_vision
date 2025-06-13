@@ -52,7 +52,7 @@ const Footer = () => {
                 href="akarshanghosh28@gmail.com"
                 className="text-sm text-muted-foreground hover:text-primary transition-colors"
               >
-                contact@aivision.com
+                akarshanghosh28@gmail.com
               </a>
             </div>
             <div className="flex space-x-4 justify-center md:justify-end">
