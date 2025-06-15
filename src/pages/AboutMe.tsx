@@ -25,14 +25,16 @@ const AboutMe = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  I'm a full-stack developer with a passion for creating innovative web applications
-                  that showcase the latest in artificial intelligence and machine learning technologies.
-                  This project represents my exploration into modern web development practices and AI integration.
+                  Hi, my name is Akarshan Ghosh. I am currently pursuing a Bachelor's degree in Electronics
+                   and Telecommunication Engineering. I am deeply passionate about both hardware and software 
+                   development, and have completed numerous projects in the fields of IoT, robotics, machine 
+                   learning, and full-stack web development.
                 </p>
                 <p className="text-muted-foreground">
-                  With a focus on clean code, user experience, and cutting-edge technology,
-                  I enjoy building applications that are both functional and visually appealing.
-                  My goal is to bridge the gap between complex AI systems and intuitive user interfaces.
+                  This project represents my exploration into modern web development practices and AI integration.
+                  With a strong focus on clean code, user experience, and cutting-edge technology, I enjoy building 
+                  applications that are both functional and visually engaging. My goal is to bridge the gap between 
+                  complex AI systems and intuitive user interfaces.
                 </p>
               </CardContent>
             </Card>
@@ -102,6 +104,7 @@ const AboutMe = () => {
                   <Badge variant="secondary">PyTorch</Badge>
                   <Badge variant="secondary">OpenCV</Badge>
                   <Badge variant="secondary">Computer Vision</Badge>
+                  <Badge variant="secondary">Convolutional Neural Network</Badge>
                   <Badge variant="secondary">Neural Networks</Badge>
                 </div>
               </div>
@@ -116,15 +119,17 @@ const AboutMe = () => {
           <CardContent>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                This AI Vision project serves as both a showcase of modern web development techniques
-                and a platform for exploring AI integration in web applications. It demonstrates:
+                The AI Vision project serves as a unified platform to showcase the functionality of multiple AI 
+                models in one place while delivering an optimal user experience.
+
+                Some of its key features include:
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                <li>Full-stack application architecture</li>
-                <li>Modern React development patterns</li>
+                <li>integration of multiple open-source AI models</li>
+                <li>A user-friendly and responsive interface</li>
                 <li>Responsive and accessible UI design</li>
-                <li>Authentication and authorization systems</li>
-                <li>Content management capabilities</li>
+                <li>Robust content management capabilities</li>
+                
                 <li>API design and integration</li>
               </ul>
             </div>
