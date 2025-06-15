@@ -1,10 +1,11 @@
-
 import { useEffect, useState } from 'react';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, Brain, Eye, Zap } from 'lucide-react';
+import { useNavigate } from 'react-router-dom';
 
 const Home = () => {
   const [isVisible, setIsVisible] = useState(false);
+  const navigate = useNavigate();
 
   useEffect(() => {
     setIsVisible(true);
@@ -23,7 +24,7 @@ const Home = () => {
               Cutting-edge artificial intelligence meets computer vision to revolutionize how we see and understand the world
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
-              <Button size="lg" className="text-lg px-8 py-6">
+              <Button size="lg" className="text-lg px-8 py-6" onClick={() => navigate('/models')}>
                 Explore Models
                 <ArrowRight className="ml-2 h-5 w-5" />
               </Button>
@@ -80,7 +81,7 @@ const Home = () => {
           <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
             Dive into our collection of AI models and discover what's possible with modern computer vision
           </p>
-          <Button size="lg" className="text-lg px-8 py-6">
+          <Button size="lg" className="text-lg px-8 py-6" onClick={() => navigate('/models')}>
             Explore Our Models
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>
