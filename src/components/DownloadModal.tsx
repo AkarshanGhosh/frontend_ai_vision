@@ -1,3 +1,4 @@
+
 import { useEffect, useState } from 'react';
 import { Dialog, DialogContent, DialogHeader, DialogTitle } from '@/components/ui/dialog';
 import { Button } from '@/components/ui/button';
@@ -6,7 +7,6 @@ import { Download, X } from 'lucide-react';
 const DownloadModal = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
-  const [deferredPrompt, setDeferredPrompt] = useState<Event | null>(null);
 
   useEffect(() => {
     const checkMobile = () => {
@@ -16,22 +16,11 @@ const DownloadModal = () => {
     };
 
     const hasSeenModal = localStorage.getItem('hasSeenDownloadModal');
-
-    const handleBeforeInstallPrompt = (e: any) => {
-      e.preventDefault(); // Prevent the automatic prompt
-      setDeferredPrompt(e); // Save the event for later use
-
-      if (checkMobile() && !hasSeenModal) {
-        setIsMobile(true);
-        setIsOpen(true);
-      }
-    };
-
-    window.addEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-
-    return () => {
-      window.removeEventListener('beforeinstallprompt', handleBeforeInstallPrompt);
-    };
+    
+    if (checkMobile() && !hasSeenModal) {
+      setIsMobile(true);
+      setIsOpen(true);
+    }
   }, []);
 
   const handleClose = () => {
@@ -39,18 +28,9 @@ const DownloadModal = () => {
     localStorage.setItem('hasSeenDownloadModal', 'true');
   };
 
-  const handleDownload = async () => {
-    if (deferredPrompt) {
-      (deferredPrompt as any).prompt();
-
-      const result = await (deferredPrompt as any).userChoice;
-      console.log('User response to the install prompt:', result);
-
-      setDeferredPrompt(null);
-    } else {
-      console.warn("Install prompt not available");
-    }
-
+  const handleDownload = () => {
+    // In a real app, this would trigger the PWA installation
+    console.log('Download/Install app');
     handleClose();
   };
 
@@ -62,12 +42,12 @@ const DownloadModal = () => {
         <DialogHeader>
           <DialogTitle className="flex items-center justify-between">
             <span>Install AI Vision</span>
-            <Button variant="ghost" size="sm" onClick={handleClose} aria-label="Close install modal">
+            <Button variant="ghost" size="sm" onClick={handleClose}>
               <X className="h-4 w-4" />
             </Button>
           </DialogTitle>
         </DialogHeader>
-
+        
         <div className="space-y-4">
           <div className="text-center">
             <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-r from-blue-600 to-purple-600 rounded-lg flex items-center justify-center">
