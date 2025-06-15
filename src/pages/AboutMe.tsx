@@ -1,4 +1,3 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Button } from '@/components/ui/button';
@@ -25,16 +24,10 @@ const AboutMe = () => {
               </CardHeader>
               <CardContent className="space-y-4">
                 <p className="text-muted-foreground">
-                  Hi, my name is Akarshan Ghosh. I am currently pursuing a Bachelor's degree in Electronics
-                   and Telecommunication Engineering. I am deeply passionate about both hardware and software 
-                   development, and have completed numerous projects in the fields of IoT, robotics, machine 
-                   learning, and full-stack web development.
+                  Hi, my name is Akarshan Ghosh. I am currently pursuing a Bachelor's degree in Electronics and Telecommunication Engineering. I am deeply passionate about both hardware and software development, and have completed numerous projects in the fields of IoT, robotics, machine learning, and full-stack web development.
                 </p>
                 <p className="text-muted-foreground">
-                  This project represents my exploration into modern web development practices and AI integration.
-                  With a strong focus on clean code, user experience, and cutting-edge technology, I enjoy building 
-                  applications that are both functional and visually engaging. My goal is to bridge the gap between 
-                  complex AI systems and intuitive user interfaces.
+                  This project represents my exploration into modern web development practices and AI integration. With a strong focus on clean code, user experience, and cutting-edge technology, I enjoy building applications that are both functional and visually engaging. My goal is to bridge the gap between complex AI systems and intuitive user interfaces.
                 </p>
               </CardContent>
             </Card>
@@ -48,7 +41,7 @@ const AboutMe = () => {
               <CardContent className="space-y-4">
                 <div className="flex flex-col space-y-3">
                   <Button variant="outline" className="justify-start" asChild>
-                    <a href="akarshanghosh28@gmail.com">
+                    <a href="mailto:akarshanghosh28@gmail.com">
                       <Mail className="h-4 w-4 mr-2" />
                       Email
                     </a>
@@ -94,7 +87,7 @@ const AboutMe = () => {
                   <Badge variant="secondary">Python</Badge>
                   <Badge variant="secondary">Flask</Badge>
                   <Badge variant="secondary">FastAPI</Badge>
-                  <Badge variant="secondary">PostgreSQL</Badge>
+                  <Badge variant="secondary">Mongo DB</Badge>
                 </div>
               </div>
               <div>
@@ -104,7 +97,6 @@ const AboutMe = () => {
                   <Badge variant="secondary">PyTorch</Badge>
                   <Badge variant="secondary">OpenCV</Badge>
                   <Badge variant="secondary">Computer Vision</Badge>
-                  <Badge variant="secondary">Convolutional Neural Network</Badge>
                   <Badge variant="secondary">Neural Networks</Badge>
                 </div>
               </div>
@@ -119,18 +111,12 @@ const AboutMe = () => {
           <CardContent>
             <div className="space-y-4">
               <p className="text-muted-foreground">
-                The AI Vision project serves as a unified platform to showcase the functionality of multiple AI 
-                models in one place while delivering an optimal user experience.
-
-                Some of its key features include:
+                The AI Vision project serves as a unified platform to showcase the functionality of multiple AI models in one place while delivering an optimal user experience.
               </p>
               <ul className="list-disc list-inside text-muted-foreground space-y-2 ml-4">
-                <li>integration of multiple open-source AI models</li>
+                <li>Integration of multiple open-source AI models</li>
                 <li>A user-friendly and responsive interface</li>
-                <li>Responsive and accessible UI design</li>
                 <li>Robust content management capabilities</li>
-                
-                <li>API design and integration</li>
               </ul>
             </div>
           </CardContent>
